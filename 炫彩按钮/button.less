@@ -1,0 +1,47 @@
+// 清除默认样式
+* {
+    margin: 0;
+    padding: 0;
+}
+//定义动画
+@keyframes btn-sun {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -400% 0;
+    }
+}
+
+.button {
+    //设置内容水平垂直居中
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a {
+        display: block;
+        width: 150px;
+        height: 40px;
+        //文字水平垂直居中
+        line-height: 40px;
+        text-align: center;
+        //去除下划线
+        text-decoration: none;
+        //设置字重，字体大小，颜色
+        font-weight: bold;
+        font-size: 20px;
+        color: #fff;
+        //设置背景渐变色
+        background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+        background-size: 400%;
+        //设置阴影
+        box-shadow: 0 4px 15px 0 rgba(175, 174, 172, 0.75);
+        //设置圆角
+        border-radius: 50px;
+    }
+    a:hover {
+        animation: btn-sun 8s infinite;
+    }
+}
