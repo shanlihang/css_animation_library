@@ -1,0 +1,48 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+@keyframes move-up {
+
+    //向上移动
+    from {
+        top: 50px;
+        //设置透明度增加动画效果
+        opacity: 0.2;
+    }
+
+    to {
+        top: 0;
+    }
+
+    /*
+    向下或向左右移动只需将top更改为bottom/left/right即可
+    调整适当的像素，达到想要的效果
+    */
+}
+
+.box {
+    // 设置宽高沾满全屏
+    width: 100vw;
+    height: 100vh;
+    //设置内容水平垂直居中
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+
+    span {
+        //设置为块元素后方可设置宽高
+        display: block;
+        width: 200px;
+        height: 50px;
+        //文字居中
+        text-align: center;
+        //设置字体大小，字重
+        font-size: 28px;
+        font-weight: bold;
+        position: relative;
+        animation: move-up 0.5s linear;
+    }
+}
