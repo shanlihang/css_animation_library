@@ -1,0 +1,29 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+@keyframes logo-load {
+  0% {
+    color: black;
+  }
+  50% {
+    color: transparent;
+  }
+  100% {
+    color: black;
+  }
+}
+.box {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box .loading {
+  font-weight: bold;
+  font-size: 18px;
+  letter-spacing: 0.1em;
+  animation: logo-load 2s infinite;
+}
