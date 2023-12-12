@@ -4,45 +4,46 @@
     box-sizing: border-box;
 }
 
-@keyframes load-beat {
+@keyframes blue {
     0% {
-        .blue {
+        height: 60px;
+    }
 
-            height: 60px;
-            background-color: lightblue;
-        }
-
-        .green {
-
-            height: 45px;
-            background-color: lightgreen;
-        }
-
-        .purple {
-
-            height: 30px;
-            background-color: lightcoral;
-        }
+    50% {
+        height: 45px;
     }
 
     100% {
-        .blue {
+        height: 30px;
+    }
+}
 
-            height: 30px;
-            background-color: lightblue;
-        }
+@keyframes green {
+    0% {
 
-        .green {
+        height: 45px;
+    }
 
-            height: 45px;
-            background-color: lightgreen;
-        }
+    50% {
+        height: 60px;
+    }
 
-        .purple {
+    100% {
+        height: 30px;
+    }
+}
 
-            height: 60px;
-            background-color: lightcoral;
-        }
+@keyframes purple {
+    0% {
+        height: 30px;
+    }
+
+    50% {
+        height: 45px;
+    }
+
+    100% {
+        height: 60px;
     }
 }
 
@@ -68,20 +69,19 @@
 
         .green {
 
-            height: 45px;
             background-color: lightgreen;
+            animation: green 0.7s ease infinite;
         }
 
         .blue {
-
-            height: 60px;
             background-color: lightblue;
+            animation: blue 0.7s ease infinite;
         }
 
         .purple {
 
-            height: 30px;
             background-color: lightcoral;
+            animation: purple 0.7s ease infinite;
         }
     }
 }
