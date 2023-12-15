@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@keyframes process-grow {
+    from {
+        width: 0px;
+    }
+
+    to {
+        width: 200px;
+    }
+}
+
+.box {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    section {
+        width: 200px;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        .out {
+            width: 200px;
+            height: 30px;
+            border-radius: 18px;
+            position: absolute;
+            background-color: #DCDCDC;
+        }
+
+        .in {
+            //不设置宽度，让动画设置宽度
+            height: 30px;
+            border-radius: 18px;
+            position: absolute;
+            background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+            animation: process-grow 5s ease infinite;
+        }
+    }
+}
